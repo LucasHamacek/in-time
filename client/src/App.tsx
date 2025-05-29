@@ -15,7 +15,7 @@ import CalculatorPage from "@/pages/calculator";
 import HistoryPage from "@/pages/history";
 import NotFound from "@/pages/not-found";
 
-function Router() {
+function AppRouter() {
   return (
     <Switch>
       <Route path="/login" component={LoginPage} />
@@ -74,7 +74,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Router />
+        <AppRouter />
       </TooltipProvider>
     </QueryClientProvider>
   );

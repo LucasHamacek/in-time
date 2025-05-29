@@ -1,4 +1,4 @@
-import { Navigate } from "wouter";
+import { useLocation } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -24,8 +24,11 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
     );
   }
 
+  const [, setLocation] = useLocation();
+
   if (!user) {
-    return <Navigate to="/login" replace />;
+    setLocation("/login");
+    return null;
   }
 
   return <>{children}</>;

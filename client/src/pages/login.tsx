@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigate } from "wouter";
+import { useLocation } from "wouter";
 import { LoginForm } from "@/components/auth/login-form";
 import { RegisterForm } from "@/components/auth/register-form";
 import { useAuth } from "@/hooks/useAuth";
