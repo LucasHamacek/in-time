@@ -41,7 +41,7 @@ export function LoginForm({ onToggleMode }: LoginFormProps) {
       await login(data.email, data.password);
       toast({
         title: "Login realizado com sucesso!",
-        description: "Bem-vindo ao TempoVale",
+        description: "Bem-vindo ao In Time",
       });
     } catch (error: any) {
       toast({
@@ -63,7 +63,7 @@ export function LoginForm({ onToggleMode }: LoginFormProps) {
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
           </svg>
         </div>
-        <h1 className="text-3xl font-bold text-slate-800 mb-2">TempoVale</h1>
+        <h1 className="text-3xl font-bold text-slate-800 mb-2">In Time</h1>
         <p className="text-slate-600">Descubra quanto tempo suas compras custam</p>
       </div>
 

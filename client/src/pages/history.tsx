@@ -95,7 +95,7 @@ export default function HistoryPage() {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'tempovale-historico.csv';
+    a.download = 'intime-historico.csv';
     a.click();
     window.URL.revokeObjectURL(url);
 

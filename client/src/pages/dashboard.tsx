@@ -27,7 +27,7 @@ export default function DashboardPage() {
     <div>
       {/* Welcome Header */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-slate-800 mb-2">Bem-vindo ao TempoVale</h1>
+        <h1 className="text-2xl font-bold text-slate-800 mb-2">Bem-vindo ao In Time</h1>
         <p className="text-slate-600">Descubra quanto tempo suas compras realmente custam</p>
       </div>
 

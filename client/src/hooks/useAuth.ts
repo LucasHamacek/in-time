@@ -20,14 +20,14 @@ export function useAuth() {
     if (!auth) {
       const demoUser = {
         uid: "demo-user",
-        email: "demo@tempovale.com",
+        email: "demo@intime.com",
       } as User;
       
       setTimeout(() => {
         setUser(demoUser);
         setUserProfile({
           uid: "demo-user",
-          email: "demo@tempovale.com",
+          email: "demo@intime.com",
           monthlySalary: 3500,
           weeklyHours: 40,
         });

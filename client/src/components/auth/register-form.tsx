@@ -46,7 +46,7 @@ export function RegisterForm({ onToggleMode }: RegisterFormProps) {
       await register(data.email, data.password);
       toast({
         title: "Conta criada com sucesso!",
-        description: "Configure seu perfil para começar a usar o TempoVale",
+        description: "Configure seu perfil para começar a usar o In Time",
       });
     } catch (error: any) {
       toast({
