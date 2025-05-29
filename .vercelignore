@@ -1,0 +1,7 @@
+server/
+shared/
+*.ts
+!client/
+!vite.config.ts
+!package.json
+!vercel.json
