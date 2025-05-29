@@ -1,0 +1,52 @@
+Quero criar um MVP funcional de um app web chamado **TempoVale**, que ajuda os usuários a entender o valor do consumo em tempo de trabalho, não em dinheiro. A ideia é transformar gastos financeiros em tempo de vida, baseado no salário mensal e carga horária semanal.
+
+Use a stack FULLSTACK_JS:
+- Frontend: React + Tailwind CSS
+- Backend: Node.js com Express (se necessário)
+- Firebase: para Auth, Firestore e Storage
+- OCR: usando uma API externa como Google Vision, OCR.space ou Mindee
+
+Funcionalidades que devem estar no MVP:
+
+1. **Autenticação (Firebase Auth)**
+   - Cadastro e login com e-mail e senha
+   - Logout
+   - Redirecionamento automático para login caso o usuário não esteja autenticado
+
+2. **Perfil do usuário**
+   - Formulário para salvar:
+     - Salário mensal (em reais)
+     - Carga horária semanal (em horas)
+   - Esses dados devem ser armazenados no Firestore vinculados ao UID do usuário
+
+3. **Upload de cupom**
+   - O usuário pode enviar uma foto do cupom fiscal
+   - A imagem é salva no Firebase Storage
+   - O backend envia essa imagem para uma **API externa de OCR** e extrai o valor total da compra
+   - Com base no salário e jornada do usuário, calcular:
+     - Quantas horas e minutos de trabalho aquele valor representa
+   - Exibir: “Essa compra custou X horas e Y minutos do seu trabalho”
+
+4. **Histórico de conversões**
+   - Listar os cupons processados com:
+     - Data
+     - Valor do cupom
+     - Tempo de trabalho equivalente
+     - Link ou miniatura da imagem enviada
+   - Dados salvos no Firestore
+
+5. **Calculadora manual**
+   - Campo para digitar qualquer valor em reais
+   - O app converte em tempo de trabalho com base no perfil do usuário
+
+6. **Design simples e funcional**
+   - Interface web responsiva com Tailwind CSS
+   - Layout minimalista com navegação básica entre páginas (login, perfil, upload, histórico)
+
+Organize o projeto com uma estrutura clara:
+- `src/components/` – componentes reutilizáveis
+- `src/screens/` – telas principais (Login, Perfil, Upload, Histórico)
+- `src/firebase/` – config e serviços Firebase
+- `src/utils/` – funções auxiliares (ex: cálculo de tempo, chamada à API OCR)
+
+Quero que você crie esse projeto a partir do zero, configure Firebase com variáveis de ambiente e me ajude a testar cada etapa. Comece pela base da autenticação e estrutura geral do app.
