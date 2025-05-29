@@ -1,7 +1,9 @@
 {
-  "buildCommand": "vite build",
-  "outputDirectory": "dist",
-  "framework": "vite",
+  "functions": {
+    "client/src/**": {
+      "runtime": "@vercel/static"
+    }
+  },
   "rewrites": [
     {
       "source": "/(.*)",
