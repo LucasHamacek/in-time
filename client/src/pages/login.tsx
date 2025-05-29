@@ -16,8 +16,11 @@ export default function LoginPage() {
     );
   }
 
+  const [, setLocation] = useLocation();
+
   if (user) {
-    return <Navigate to="/dashboard" replace />;
+    setLocation("/dashboard");
+    return null;
   }
 
   return (
