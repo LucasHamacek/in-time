@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { LoginForm } from "@/components/auth/login-form";
 import { RegisterForm } from "@/components/auth/register-form";
@@ -7,6 +7,13 @@ import { useAuth } from "@/hooks/useAuth";
 export default function LoginPage() {
   const [isLoginMode, setIsLoginMode] = useState(true);
   const { user, loading } = useAuth();
+  const [, setLocation] = useLocation();
+
+  useEffect(() => {
+    if (!loading && user) {
+      setLocation("/dashboard");
+    }
+  }, [loading, user, setLocation]);
 
   if (loading) {
     return (
@@ -16,10 +23,7 @@ export default function LoginPage() {
     );
   }
 
-  const [, setLocation] = useLocation();
-
   if (user) {
-    setLocation("/dashboard");
     return null;
   }
 
