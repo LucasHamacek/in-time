@@ -8,6 +8,7 @@ interface ProtectedRouteProps {
 
 export function ProtectedRoute({ children }: ProtectedRouteProps) {
   const { user, loading } = useAuth();
+  const [, setLocation] = useLocation();
 
   if (loading) {
     return (
@@ -23,8 +24,6 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
       </div>
     );
   }
-
-  const [, setLocation] = useLocation();
 
   if (!user) {
     setLocation("/login");
